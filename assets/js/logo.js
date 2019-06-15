@@ -1,51 +1,20 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//
-//
-//   function change(){
-//     l = document.getElementById('logo')
-//     l.innerHTML = "<i class=\"fas fa-cube\"></i>"
-//   }
-//
-//
-// }, false);
-//
-
-
-  //l.innerHTML = "<i class="fas fa-cube"></i>";
-  (function($){
-      $.fn.extend({
-          rotaterator: function(options) {
-
-              var defaults = {
-                  fadeSpeed: 500,
-                  pauseSpeed: 1,
-  				child:null
-              };
-
-              var options = $.extend(defaults, options);
-
-              return this.each(function() {
-                    var o =options;
-                    var obj = $(this);
-                    var items = $(obj.children(), obj);
-  				  items.each(function() {$(this).hide();})
-  				  if(!o.child){var next = $(obj).children(':first');
-  				  }else{var next = o.child;
-  				  }
-  				  $(next).fadeIn(o.fadeSpeed, function() {
-  						$(next).delay(o.pauseSpeed).fadeOut(o.fadeSpeed, function() {
-  							var next = $(this).next();
-  							if (next.length == 0){
-  									next = $(obj).children(':first');
-  							}
-  							$(obj).rotaterator({child : next, fadeSpeed : o.fadeSpeed, pauseSpeed : o.pauseSpeed});
-  						})
-  					});
-              });
-          }
+$(document).ready(function () {
+      animationlogo();
+      setInterval(animationlogo, 6000)
+  })
+  c = -1;
+  function animationlogo(){
+      c = c+1;
+      console.log('yeet')
+      if(c>2){
+          c=0;
+      }
+       $('.level3').each(function (i,e) {
+          $(this).css("display", "none");
+          $(this).removeClass("animate");
+          if(i == c){
+              $(this).css("display", "block");
+          }   $(this).addClass("animate");
       });
-  })(jQuery);
 
-   $(document).ready(function() {
-          $('#rotate').rotaterator({fadeSpeed:2000, pauseSpeed:100});
-   });
+  }

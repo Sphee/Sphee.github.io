@@ -1,0 +1,80 @@
+<html>
+<head>
+    <script src="assets/js/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        animationlogo();
+        setInterval(animationlogo, 6000)
+    })
+    c = -1;
+    function animationlogo(){
+        c = c+1;
+        console.log('yeet')
+        if(c>2){
+            c=0;
+        }
+         $('.level3').each(function (i,e) {
+            $(this).css("display", "none");
+            $(this).removeClass("animate");
+            if(i == c){
+                $(this).css("display", "block");
+            }   $(this).addClass("animate");
+        });
+
+    }
+
+</script>
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+  <style>
+    .level1{
+      height: 86px;
+      width:  86px;
+      border: 1px solid black;
+      position: relative;
+    }
+    .level2{
+      height: 86px;
+      width: 86px;
+      position: relative;
+        border-radius: 50%;
+    }
+    .level3{
+
+      position: absolute;
+      display: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+    }
+      .animate{
+          animation-name: fade;
+          animation-iteration-count: infinite;
+          animation-duration: 6s;
+      }
+    @keyframes fade{
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+  </style>
+</head>
+<body>
+
+<div class="level1">
+  <div class="level2">
+      <div class="level3 animate"> <i class="fab fa-ethereum"></i></div>
+      <div class="level3"> <i class="fab fa-bitcoin"></i></div>
+      <div class="level3"> <i class="fas fa-users"></i></div>
+      <div class="level3"> <i class="fas fa-cube"></i></div>
+
+ </div>
+ </div>
+</body>
+</html>

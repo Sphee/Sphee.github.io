@@ -1,0 +1,49 @@
+<html>
+<head>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout
+}, false);
+
+function animationlogo(){
+
+}
+
+
+</script>
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+  <style>
+    .level1{
+      height: 86px;
+      width:  86px;
+      border: 1px solid black;
+      position: relative;
+    }
+    .level2{
+      height: 86px;
+      width: 86px;
+      background-color: blue;
+      position: relative;
+        border-radius: 50%;
+    }
+    .level3{
+      background-color: cyan;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="level1">
+  <div class="level2">
+    <div class="level3"> <i class="fab fa-ethereum"></i></div>
+      <div class="level3"> <i class="fab fa-bitcoin"></i></div>
+      <div class="level3"> <i class="fas fa-users"></i></div>
+ </div>
+ </div>
+</body>
+</html>
