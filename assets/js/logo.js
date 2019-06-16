@@ -1,6 +1,6 @@
 $(document).ready(function () {
       animationlogo();
-      setInterval(animationlogo, 6000)
+      setInterval(animationlogo, 5000)
   })
   c = -1;
   function animationlogo(){

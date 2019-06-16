@@ -22,7 +22,7 @@
       .animate{
           animation-name: fade;
           animation-iteration-count: infinite;
-          animation-duration: 6s;
+          animation-duration: 5s;
       }
     @keyframes fade{
         0%{
