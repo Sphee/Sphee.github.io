@@ -1,78 +1,166 @@
+<!DOCTYPE HTML>
 <html>
 <head>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        animationlogo()
-        setInterval(animationlogo, 6000)
-    }, false);
-    c = -1;
-    function animationlogo(){
-        c = c+1;
-        console.log('yeet')
-        if(c>2){
-            c=0;
+    <title>SPHEE - Exchange/Shop</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!--<link rel="stylesheet" href="assets/css/main.css" />-->
+    <!--<link rel="stylesheet" href="assets/css/logoani.css" />-->
+    <!--<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>-->
+</head>
+<style>
+    .logo{
+        font-size: 45px;
+    }
+    .content{
+        background-color: dodgerblue;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        margin-top: 56px;
+        animation-name: example;
+        animation-duration: 1s;
+
+        overflow: hidden;
+    }
+    @keyframes example {
+        from{
+            height:0px;
+            margin-top: 156px;
         }
-        var e = document.getElementsByClassName('level3');
-        for(i=0; i<e.length;i++){
-            e[i].style.display = "none";
-            e[i].classList.remove("animate")
+        to{
+            height:178px;
+            margin-top: 56px;
         }
-        e[c].style.display = "block";
-        e[c].classList.add("animate")
     }
+    .inner{
+        background-color: aquamarine;
 
+        padding: 32px;
 
-</script>
-  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
-  <style>
-    .level1{
-      height: 86px;
-      width:  86px;
-      border: 1px solid black;
-      position: relative;
     }
-    .level2{
-      height: 86px;
-      width: 86px;
-      position: relative;
-        border-radius: 50%;
+    h1 {
+        background-color: indigo;
     }
-    .level3{
-
-      position: absolute;
-      display: none;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      text-align: center;
+    p{
+        background-color: crimson;
     }
-      .animate{
-          animation-name: fade;
-          animation-iteration-count: infinite;
-          animation-duration: 6s;
-      }
-    @keyframes fade{
+    .tp
+    {
+        position: absolute;
+        height: 100px;
+        width: 200px;
+        top:0px;
+        background-color: blue;
+        /*transition: height 2s;*/
+        animation: moveup;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+    }
+    .bt
+    {
+        position: absolute;
+        height:100px;
+        width: 200px;
+        top:100px;
+        background-color: lightsalmon;
+        /*transition: top 2s;*/
+        animation: movedown;
+        animation-duration: .5s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes moveup {
         0%{
-            opacity: 0;
+            height: 100px;
         }
         50%{
-            opacity: 1;
+            height: 50px;
         }
         100%{
-            opacity: 0;
+            height: 50px;
         }
+
     }
-  </style>
-</head>
-<body>
+    @keyframes movedown {
+        0%{
+            top: 100px;
+        }
+        50%{
+            top: 150px;
+        }
+        100%{
+            top: 150px;
+        }
 
-<div class="level1">
-  <div class="level2">
-      <div class="level3 animate"> <i class="fab fa-ethereum"></i></div>
-      <div class="level3"> <i class="fab fa-bitcoin"></i></div>
-      <div class="level3"> <i class="fas fa-users"></i></div>
+    }
+    .tp:hover{
+        height : 50px;
+    }
+    .bt:hover{
+        top : 150px;
+    }
+    .ct{
+        height: 50px;
+        background-color: yellow;
+    }
+    .ctx{
+        height: 100px;
+        background-color: hotpink;
+    }
+    .wrap{
+        position: relative;
+        background-color:red;
+    }
 
- </div>
- </div>
+</style>
+
+<body class="is-preload">
+
+<!-- Wrapper -->
+
+    <!-- Header -->
+    <header id="header">
+        <!--<div class="level1">-->
+            <!--<div id="level2">-->
+                <!--<div class="level3 animate"><i class="fab fa-ethereum"></i></div>-->
+                <!--<div class="level3"><i class="fab fa-btc"></i></div>-->
+                <!--<div class="level3"><i class="fas fa-users"></i></div>-->
+            <!--</div>-->
+
+
+        <!--</div>-->
+        <div style='height: 200px; background-color: orange'></div>
+        <div class="content">
+            <div class="inner">
+                <h1>S P H E E</h1>
+                <p>BTC/ETH/LTC Exchange - ALT/Account Shop</p>
+            </div>
+        </div>
+        <nav>
+
+        </nav>
+    </header>
+
+    <div class="wrap">
+        <div class="tp"></div>
+        <div class="ct"></div>
+        <div class="ctx"></div>
+        <div class="bt"></div>
+    </div>
+
+
+
+
+<!-- BG -->
+
+
+<!-- Scripts -->
+<!--<script src="assets/js/jquery.min.js"></script>-->
+<!--<script src="assets/js/breakpoints.min.js"></script>-->
+<!--<script src="assets/js/main.js"></script>-->
+
+
 </body>
+
 </html>

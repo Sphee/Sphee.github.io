@@ -1,11 +1,7 @@
-/*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 (function($) {
 
+	document.getElementById("defaultOpen").click();
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
@@ -13,6 +9,8 @@
 		$footer = $('#footer'),
 		$main = $('#main'),
 		$main_articles = $main.children('article');
+
+	//Shop Tabs
 
 	// Breakpoints.
 		breakpoints({

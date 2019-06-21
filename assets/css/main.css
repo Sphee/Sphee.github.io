@@ -25,6 +25,8 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -998,7 +1000,7 @@ input, select, textarea {
 
 /* Button */
 
-	input[type="submit"],
+	/* input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
 	button,
@@ -1102,7 +1104,7 @@ input, select, textarea {
 	input[type="button"],
 	button {
 		line-height: calc(2.75rem - 2px);
-	}
+	} */
 
 /* BG */
 
@@ -1539,7 +1541,7 @@ input, select, textarea {
 			-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
 			-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
 			transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
-			padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
+		/*padding: 4.5rem 2.5rem 1.5rem 2.5rem ; */
 			position: relative;
 			width: 40rem;
 			max-width: 100%;

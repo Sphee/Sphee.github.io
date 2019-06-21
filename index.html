@@ -1,13 +1,33 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>SPHEE - Exchange/Shop</title>
+		<title>sphee.me</title>
+		<link rel="icon" href="https://raw.githubusercontent.com/ethereum/ethereum-org/master/dist/favicon.ico">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/logoani.css" />
+		<link rel="stylesheet" href="assets/css/tabs.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	<script>
+	function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+	</script>
+
 	<style>
 		.logo{
 			font-size: 45px;
@@ -40,15 +60,15 @@
 						<div class="content">
 							<div class="inner">
 								<h1>S P H E E</h1>
-								<p>BTC/ETH/LTC Exchange - ALT/Account Shop</p>
+								<p>BTC ⋅ ETH Exchange - ALT/Account Shop</p>
 							</div>
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">Home</a></li>
+								<!-- <li><a href="#intro">Home</a></li> -->
 								<li><a href="#work">Exchange</a></li>
 								<li><a href="#about">Shops</a></li>
-								<li><a href="#contact">Contact</a></li>
+								<li><a href="#contact">Support</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -69,33 +89,41 @@
 							<article id="work">
 								<h2 class="major">Work</h2>
 								<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
-								
+
 								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
 								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
 							</article>
 
 						<!-- About -->
 							<article id="about">
-								<h2 class="major">Alts & Accounts</h2>
-								<!-- <span class="image main"><img src="" alt="" /></span> -->
-								<h3 class="major">Buttons</h3>
-								<ul class="actions">
-									<li><a href="#" class="button primary">Primary</a></li>
-									<li><a href="#" class="button">Default</a></li>
-								</ul>
-								<ul class="actions">
-									<li><a href="#" class="button">Default</a></li>
-									<li><a href="#" class="button small">Small</a></li>
-								</ul>
-								<ul class="actions">
-									<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-									<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-								</ul>
-								<ul class="actions">
-									<li><span class="button primary disabled">Disabled</span></li>
-									<li><span class="button disabled">Disabled</span></li>
-								</ul>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+
+								<div class="tab">
+								  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">MC Alts</button>
+								  <button class="tablinks" onclick="openCity(event, 'Paris')">Automatic Spotify Upgrade</button>
+								  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Rusherhack</button>
+								</div>
+
+								<div id="London" class="tabcontent">
+								  
+								</div>
+
+								<div id="Paris" class="tabcontent">
+
+								</div>
+
+								<div id="Tokyo" class="tabcontent">
+
+								</div>
+
+								<!-- <h2 class="major">Alts & Accounts</h2>
+								<div style="text-align:center;">
+									<a href="#" class="button primary">MINECRAFT ALTS</a>
+								</div>
+									<div style="height:20px">
+									</div>
+								<div style="text-align:center;">
+									<a href="#" class="button primary disabled">SPOTIFY UPGRADES</a>
+								</div> -->
 							</article>
 
 						<!-- Contact -->
