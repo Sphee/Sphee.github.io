@@ -8,26 +8,25 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/logoani.css" />
 		<link rel="stylesheet" href="assets/css/tabs.css" />
+		<link rel="stylesheet" href="assets/css/rain.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<script>
 	function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+	  tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+	  tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	document.getElementById(cityName).style.display = "block";
+	evt.currentTarget.className += " active";
+	}
 	</script>
-
 	<style>
 		.logo{
 			font-size: 45px;
@@ -40,7 +39,10 @@
 
 	</style>
 
-	<body class="is-preload">
+	<body class="is-preload back-row-toggle splat-toggle">
+		<div class="rain front-row"></div>
+<div class="rain back-row"></div>
+</div>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -419,8 +421,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/logo.js"></script>
 			<script src="https://shoppy.gg/api/embed.js"></script>
+			<script src="assets/js/tabs.js"></script>
 
-
-	</body>\
+	</body>
 
 </html>
